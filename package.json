@@ -1,0 +1,58 @@
+{
+  "name": "react-simple-social-sharer",
+  "version": "1.0.0",
+  "description": "React component buttons that open popups to share your link on Facebook, Twitter, Reddit, Pinterest, LinkedIn, and Google+, without the client downloading heavy third-party sharing dependencies.",
+  "main": "build/index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Steve Wozniak",
+    "email": "stephan.wozniak@gmail.com",
+    "url": "https://github.com/swozniak"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/swozniak/react-simple-social-sharer.git"
+  },
+  "homepage": "https://github.com/swozniak/react-simple-social-sharer",
+  "bugs": {
+    "url": "https://github.com/swozniak/react-simple-social-sharer/issues"
+  },
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^15.5.4",
+    "react-icons": "^2.2.7",
+    "webpack": "^2.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "keywords": [
+    "social-media",
+    "social",
+    "share",
+    "share-button",
+    "share-buttons",
+    "buttons,",
+    "react",
+    "react-component",
+    "facebook",
+    "twitter",
+    "reddit",
+    "pinterest",
+    "linkedin",
+    "google+"
+  ]
+}
