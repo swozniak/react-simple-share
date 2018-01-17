@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import FaFacebookOfficial from "react-icons/lib/fa/facebook-official";
+import FaFacebookSquare from "react-icons/lib/fa/facebook-square";
 
 const Facebook = function(props) {
   const url = `u=${props.url || location.href}`;
@@ -19,7 +19,7 @@ const Facebook = function(props) {
         return false;
       }}
     >
-      <FaFacebookOfficial />
+      <FaFacebookSquare />
     </a>
   );
 };
