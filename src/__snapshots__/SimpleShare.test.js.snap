@@ -1,0 +1,533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Facebook hasn't changed 1`] = `
+<a
+  href="https://www.facebook.com/sharer/sharer.php?u=about:blank"
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "color": "#3B5998",
+      "fontSize": "32px",
+    }
+  }
+  target="popup"
+>
+  <svg
+    fill="currentColor"
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "color": undefined,
+        "verticalAlign": "middle",
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em"
+  >
+    <g>
+      <path
+        d="m30.9 2.9q2.6 0 4.5 1.8t1.9 4.6v21.4q0 2.7-1.9 4.6t-4.5 1.8h-4.2v-13.2h4.4l0.7-5.2h-5.1v-3.3q0-1.3 0.5-1.9t2-0.6l2.8 0v-4.7q-1.5-0.2-4-0.2-3.1 0-4.9 1.8t-1.8 5.1v3.8h-4.5v5.2h4.5v13.2h-11.9q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5z"
+      />
+    </g>
+  </svg>
+</a>
+`;
+
+exports[`GooglePlus hasn't changed 1`] = `
+<a
+  href="https://plus.google.com/share?url=about:blank"
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "color": "#DB4437",
+      "fontSize": "32px",
+    }
+  }
+  target="popup"
+>
+  <svg
+    fill="currentColor"
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "color": undefined,
+        "verticalAlign": "middle",
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em"
+  >
+    <g>
+      <path
+        d="m23.5 20.2q0-0.6-0.2-1.4h-8v2.9h4.8q-0.1 0.6-0.4 1.1t-0.8 1.2-1.5 1-2.1 0.4q-2.3 0-3.8-1.6t-1.6-3.8 1.6-3.8 3.8-1.6q2 0 3.4 1.3l2.3-2.2q-2.4-2.3-5.7-2.3-3.6 0-6.1 2.5t-2.5 6.1 2.5 6.1 6.1 2.5q3.6 0 5.9-2.4t2.3-6z m7.7 1h2.4v-2.4h-2.4v-2.5h-2.5v2.5h-2.4v2.4h2.4v2.5h2.5v-2.5z m6.1-11.9v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+      />
+    </g>
+  </svg>
+</a>
+`;
+
+exports[`LinkedIn hasn't changed 1`] = `
+<a
+  href="https://www.linkedin.com/shareArticle?mini=true&url=about:blank&title="
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "color": "#007BB5",
+      "fontSize": "32px",
+    }
+  }
+  target="popup"
+>
+  <svg
+    fill="currentColor"
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "color": undefined,
+        "verticalAlign": "middle",
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em"
+  >
+    <g>
+      <path
+        d="m8.3 31.6h5.1v-15.5h-5.1v15.5z m5.5-20.3q0-1.2-0.8-1.9t-2.1-0.8-2.1 0.8-0.8 1.9q0 1.1 0.8 1.9t2 0.8h0.1q1.3 0 2.1-0.8t0.8-1.9z m13 20.3h5.2v-8.9q0-3.5-1.6-5.2t-4.3-1.8q-3.1 0-4.7 2.6h0v-2.2h-5.1q0 1.4 0 15.5h5.1v-8.7q0-0.8 0.2-1.2 0.3-0.8 1-1.4t1.7-0.5q2.5 0 2.5 3.5v8.3z m10.5-22.3v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+      />
+    </g>
+  </svg>
+</a>
+`;
+
+exports[`Pinterest hasn't changed 1`] = `
+<a
+  href="https://www.pinterest.com/pin/create/button/?url=about:blank"
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "color": "#BD081C",
+      "fontSize": "32px",
+    }
+  }
+  target="popup"
+>
+  <svg
+    fill="currentColor"
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "color": undefined,
+        "verticalAlign": "middle",
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em"
+  >
+    <g>
+      <path
+        d="m30.9 2.9q2.6 0 4.5 1.8t1.9 4.6v21.4q0 2.7-1.9 4.6t-4.5 1.8h-16.2q1.9-2.7 2.4-4.6 0.2-0.8 1.2-4.7 0.4 0.9 1.6 1.5t2.5 0.6q4.1 0 6.6-3.3t2.6-8.3q0-1.9-0.8-3.6t-2.2-3.1-3.4-2.2-4.4-0.8q-2.3 0-4.3 0.6t-3.4 1.7-2.4 2.5-1.5 2.8-0.5 3q0 2.3 0.9 4t2.6 2.4q0.3 0.2 0.5 0t0.3-0.4q0.3-1 0.4-1.3 0.1-0.5-0.3-1-1.1-1.4-1.1-3.3 0-3.4 2.3-5.8t6.1-2.3q3.3 0 5.2 1.8t1.8 4.7q0 3.7-1.5 6.4t-3.9 2.6q-1.3 0-2.1-1t-0.5-2.3q0.1-0.8 0.6-2.1t0.6-2.2 0.3-1.7q0-1.1-0.6-1.8t-1.7-0.7q-1.4 0-2.3 1.2t-1 3.1q0 1.6 0.6 2.7l-2.2 9.3q-0.6 2.2-0.2 5.6h-4.1q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5z"
+      />
+    </g>
+  </svg>
+</a>
+`;
+
+exports[`Reddit hasn't changed 1`] = `
+<a
+  href="http://www.reddit.com/submit/?url=about:blank"
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "color": "#336699",
+      "fontSize": "32px",
+    }
+  }
+  target="popup"
+>
+  <svg
+    fill="currentColor"
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "color": undefined,
+        "verticalAlign": "middle",
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em"
+  >
+    <g>
+      <path
+        d="m24 25.2q0.3 0.3 0 0.6-1.2 1.2-3.9 1.2t-3.8-1.2q-0.3-0.3 0-0.6 0.1-0.1 0.3-0.1t0.3 0.1q0.9 0.9 3.2 0.9t3.3-0.9q0.1-0.1 0.3-0.1t0.3 0.1z m-5.9-3.5q0 0.7-0.5 1.2t-1.2 0.5-1.2-0.5-0.5-1.2q0-0.7 0.5-1.2t1.2-0.5 1.2 0.5 0.5 1.2z m7.5 0q0 0.7-0.5 1.2t-1.2 0.5-1.2-0.5-0.5-1.2q0-0.7 0.5-1.2t1.2-0.5 1.2 0.5 0.5 1.2z m4.8-2.3q0-0.9-0.6-1.6t-1.7-0.7q-0.9 0-1.6 0.7-2.5-1.7-6-1.8l1.3-5.4 3.8 0.9q0 0.7 0.5 1.2t1.2 0.4q0.7 0 1.2-0.5t0.5-1.2-0.5-1.2-1.2-0.5q-1.1 0-1.6 1l-4.2-1q-0.4-0.1-0.4 0.3l-1.4 6q-3.4 0.1-5.9 1.9-0.7-0.8-1.6-0.8-1 0-1.7 0.7t-0.6 1.6q0 0.7 0.3 1.2t0.9 0.9q-0.1 0.6-0.1 1.1 0 2.7 2.7 4.6t6.5 2q3.8 0 6.4-2t2.7-4.6q0-0.6-0.1-1.1 0.5-0.3 0.9-0.9t0.3-1.2z m6.9-10.1v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+      />
+    </g>
+  </svg>
+</a>
+`;
+
+exports[`SimpleShare hasn't changed 1`] = `
+<div
+  className="SimpleShare"
+>
+  <a
+    href="https://www.facebook.com/sharer/sharer.php?u=about:blank"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "color": "#3B5998",
+        "fontSize": "32px",
+      }
+    }
+    target="popup"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      preserveAspectRatio="xMidYMid meet"
+      style={
+        Object {
+          "color": undefined,
+          "verticalAlign": "middle",
+        }
+      }
+      viewBox="0 0 40 40"
+      width="1em"
+    >
+      <g>
+        <path
+          d="m30.9 2.9q2.6 0 4.5 1.8t1.9 4.6v21.4q0 2.7-1.9 4.6t-4.5 1.8h-4.2v-13.2h4.4l0.7-5.2h-5.1v-3.3q0-1.3 0.5-1.9t2-0.6l2.8 0v-4.7q-1.5-0.2-4-0.2-3.1 0-4.9 1.8t-1.8 5.1v3.8h-4.5v5.2h4.5v13.2h-11.9q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5z"
+        />
+      </g>
+    </svg>
+  </a>
+  <a
+    href="https://twitter.com/intent/tweet/?&url=about:blank&text="
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "color": "#1DA1F2",
+        "fontSize": "32px",
+      }
+    }
+    target="popup"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      preserveAspectRatio="xMidYMid meet"
+      style={
+        Object {
+          "color": undefined,
+          "verticalAlign": "middle",
+        }
+      }
+      viewBox="0 0 40 40"
+      width="1em"
+    >
+      <g>
+        <path
+          d="m31.6 13.6q-1.3 0.6-2.7 0.8 1.5-0.9 2-2.6-1.4 0.8-2.9 1.1-1.4-1.5-3.5-1.5-1.9 0-3.3 1.4t-1.3 3.3q0 0.7 0.1 1.1-2.9-0.2-5.4-1.5t-4.3-3.4q-0.7 1.1-0.7 2.3 0 2.6 2.1 3.9-1.1 0-2.3-0.5v0q0 1.7 1.1 3t2.8 1.6q-0.7 0.2-1.1 0.2-0.3 0-0.9-0.1 0.4 1.4 1.6 2.3t2.8 1q-2.6 2-5.9 2-0.6 0-1.1-0.1 3.3 2.1 7.2 2.1 2.5 0 4.7-0.8t3.7-2.1 2.7-3.1 1.7-3.6 0.5-3.7q0-0.4 0-0.7 1.4-1 2.4-2.4z m5.7-4.3v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+        />
+      </g>
+    </svg>
+  </a>
+  <a
+    href="http://www.tumblr.com/widgets/share/tool?shareSource=legacy&posttype=link&url=about:blank&title="
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "color": "#35465D",
+        "fontSize": "32px",
+      }
+    }
+    target="popup"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      preserveAspectRatio="xMidYMid meet"
+      style={
+        Object {
+          "color": undefined,
+          "verticalAlign": "middle",
+        }
+      }
+      viewBox="0 0 40 40"
+      width="1em"
+    >
+      <g>
+        <path
+          d="m28.4 32.6l-1.4-4.1q-1 0.5-2.3 0.5-0.8 0-1.4-0.2t-0.9-0.7-0.4-0.9-0.1-1v-8.9h5.8v-4.3h-5.8v-7.3h-4.1q-0.2 0-0.2 0.2-0.2 1-0.4 2t-0.9 2.1-1.7 2.1-2.7 1.5v3.7h2.9v9.4q0 1.2 0.5 2.5t1.5 2.5 2.7 1.9 3.9 0.7q1.5 0 3-0.6t2-1.1z m8.9-23.3v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+        />
+      </g>
+    </svg>
+  </a>
+  <a
+    href="https://www.pinterest.com/pin/create/button/?url=about:blank"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "color": "#BD081C",
+        "fontSize": "32px",
+      }
+    }
+    target="popup"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      preserveAspectRatio="xMidYMid meet"
+      style={
+        Object {
+          "color": undefined,
+          "verticalAlign": "middle",
+        }
+      }
+      viewBox="0 0 40 40"
+      width="1em"
+    >
+      <g>
+        <path
+          d="m30.9 2.9q2.6 0 4.5 1.8t1.9 4.6v21.4q0 2.7-1.9 4.6t-4.5 1.8h-16.2q1.9-2.7 2.4-4.6 0.2-0.8 1.2-4.7 0.4 0.9 1.6 1.5t2.5 0.6q4.1 0 6.6-3.3t2.6-8.3q0-1.9-0.8-3.6t-2.2-3.1-3.4-2.2-4.4-0.8q-2.3 0-4.3 0.6t-3.4 1.7-2.4 2.5-1.5 2.8-0.5 3q0 2.3 0.9 4t2.6 2.4q0.3 0.2 0.5 0t0.3-0.4q0.3-1 0.4-1.3 0.1-0.5-0.3-1-1.1-1.4-1.1-3.3 0-3.4 2.3-5.8t6.1-2.3q3.3 0 5.2 1.8t1.8 4.7q0 3.7-1.5 6.4t-3.9 2.6q-1.3 0-2.1-1t-0.5-2.3q0.1-0.8 0.6-2.1t0.6-2.2 0.3-1.7q0-1.1-0.6-1.8t-1.7-0.7q-1.4 0-2.3 1.2t-1 3.1q0 1.6 0.6 2.7l-2.2 9.3q-0.6 2.2-0.2 5.6h-4.1q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5z"
+        />
+      </g>
+    </svg>
+  </a>
+  <a
+    href="http://www.reddit.com/submit/?url=about:blank"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "color": "#336699",
+        "fontSize": "32px",
+      }
+    }
+    target="popup"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      preserveAspectRatio="xMidYMid meet"
+      style={
+        Object {
+          "color": undefined,
+          "verticalAlign": "middle",
+        }
+      }
+      viewBox="0 0 40 40"
+      width="1em"
+    >
+      <g>
+        <path
+          d="m24 25.2q0.3 0.3 0 0.6-1.2 1.2-3.9 1.2t-3.8-1.2q-0.3-0.3 0-0.6 0.1-0.1 0.3-0.1t0.3 0.1q0.9 0.9 3.2 0.9t3.3-0.9q0.1-0.1 0.3-0.1t0.3 0.1z m-5.9-3.5q0 0.7-0.5 1.2t-1.2 0.5-1.2-0.5-0.5-1.2q0-0.7 0.5-1.2t1.2-0.5 1.2 0.5 0.5 1.2z m7.5 0q0 0.7-0.5 1.2t-1.2 0.5-1.2-0.5-0.5-1.2q0-0.7 0.5-1.2t1.2-0.5 1.2 0.5 0.5 1.2z m4.8-2.3q0-0.9-0.6-1.6t-1.7-0.7q-0.9 0-1.6 0.7-2.5-1.7-6-1.8l1.3-5.4 3.8 0.9q0 0.7 0.5 1.2t1.2 0.4q0.7 0 1.2-0.5t0.5-1.2-0.5-1.2-1.2-0.5q-1.1 0-1.6 1l-4.2-1q-0.4-0.1-0.4 0.3l-1.4 6q-3.4 0.1-5.9 1.9-0.7-0.8-1.6-0.8-1 0-1.7 0.7t-0.6 1.6q0 0.7 0.3 1.2t0.9 0.9q-0.1 0.6-0.1 1.1 0 2.7 2.7 4.6t6.5 2q3.8 0 6.4-2t2.7-4.6q0-0.6-0.1-1.1 0.5-0.3 0.9-0.9t0.3-1.2z m6.9-10.1v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+        />
+      </g>
+    </svg>
+  </a>
+  <a
+    href="https://www.linkedin.com/shareArticle?mini=true&url=about:blank&title="
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "color": "#007BB5",
+        "fontSize": "32px",
+      }
+    }
+    target="popup"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      preserveAspectRatio="xMidYMid meet"
+      style={
+        Object {
+          "color": undefined,
+          "verticalAlign": "middle",
+        }
+      }
+      viewBox="0 0 40 40"
+      width="1em"
+    >
+      <g>
+        <path
+          d="m8.3 31.6h5.1v-15.5h-5.1v15.5z m5.5-20.3q0-1.2-0.8-1.9t-2.1-0.8-2.1 0.8-0.8 1.9q0 1.1 0.8 1.9t2 0.8h0.1q1.3 0 2.1-0.8t0.8-1.9z m13 20.3h5.2v-8.9q0-3.5-1.6-5.2t-4.3-1.8q-3.1 0-4.7 2.6h0v-2.2h-5.1q0 1.4 0 15.5h5.1v-8.7q0-0.8 0.2-1.2 0.3-0.8 1-1.4t1.7-0.5q2.5 0 2.5 3.5v8.3z m10.5-22.3v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+        />
+      </g>
+    </svg>
+  </a>
+  <a
+    href="https://plus.google.com/share?url=about:blank"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "color": "#DB4437",
+        "fontSize": "32px",
+      }
+    }
+    target="popup"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      preserveAspectRatio="xMidYMid meet"
+      style={
+        Object {
+          "color": undefined,
+          "verticalAlign": "middle",
+        }
+      }
+      viewBox="0 0 40 40"
+      width="1em"
+    >
+      <g>
+        <path
+          d="m23.5 20.2q0-0.6-0.2-1.4h-8v2.9h4.8q-0.1 0.6-0.4 1.1t-0.8 1.2-1.5 1-2.1 0.4q-2.3 0-3.8-1.6t-1.6-3.8 1.6-3.8 3.8-1.6q2 0 3.4 1.3l2.3-2.2q-2.4-2.3-5.7-2.3-3.6 0-6.1 2.5t-2.5 6.1 2.5 6.1 6.1 2.5q3.6 0 5.9-2.4t2.3-6z m7.7 1h2.4v-2.4h-2.4v-2.5h-2.5v2.5h-2.4v2.4h2.4v2.5h2.5v-2.5z m6.1-11.9v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+        />
+      </g>
+    </svg>
+  </a>
+</div>
+`;
+
+exports[`Tumblr hasn't changed 1`] = `
+<a
+  href="http://www.tumblr.com/widgets/share/tool?shareSource=legacy&posttype=link&url=about:blank&title="
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "color": "#35465D",
+      "fontSize": "32px",
+    }
+  }
+  target="popup"
+>
+  <svg
+    fill="currentColor"
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "color": undefined,
+        "verticalAlign": "middle",
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em"
+  >
+    <g>
+      <path
+        d="m28.4 32.6l-1.4-4.1q-1 0.5-2.3 0.5-0.8 0-1.4-0.2t-0.9-0.7-0.4-0.9-0.1-1v-8.9h5.8v-4.3h-5.8v-7.3h-4.1q-0.2 0-0.2 0.2-0.2 1-0.4 2t-0.9 2.1-1.7 2.1-2.7 1.5v3.7h2.9v9.4q0 1.2 0.5 2.5t1.5 2.5 2.7 1.9 3.9 0.7q1.5 0 3-0.6t2-1.1z m8.9-23.3v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+      />
+    </g>
+  </svg>
+</a>
+`;
+
+exports[`Twitter hasn't changed 1`] = `
+<a
+  href="https://twitter.com/intent/tweet/?&url=about:blank&text="
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "color": "#1DA1F2",
+      "fontSize": "32px",
+    }
+  }
+  target="popup"
+>
+  <svg
+    fill="currentColor"
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "color": undefined,
+        "verticalAlign": "middle",
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em"
+  >
+    <g>
+      <path
+        d="m31.6 13.6q-1.3 0.6-2.7 0.8 1.5-0.9 2-2.6-1.4 0.8-2.9 1.1-1.4-1.5-3.5-1.5-1.9 0-3.3 1.4t-1.3 3.3q0 0.7 0.1 1.1-2.9-0.2-5.4-1.5t-4.3-3.4q-0.7 1.1-0.7 2.3 0 2.6 2.1 3.9-1.1 0-2.3-0.5v0q0 1.7 1.1 3t2.8 1.6q-0.7 0.2-1.1 0.2-0.3 0-0.9-0.1 0.4 1.4 1.6 2.3t2.8 1q-2.6 2-5.9 2-0.6 0-1.1-0.1 3.3 2.1 7.2 2.1 2.5 0 4.7-0.8t3.7-2.1 2.7-3.1 1.7-3.6 0.5-3.7q0-0.4 0-0.7 1.4-1 2.4-2.4z m5.7-4.3v21.4q0 2.7-1.9 4.6t-4.5 1.8h-21.5q-2.6 0-4.5-1.8t-1.9-4.6v-21.4q0-2.7 1.9-4.6t4.5-1.8h21.5q2.6 0 4.5 1.8t1.9 4.6z"
+      />
+    </g>
+  </svg>
+</a>
+`;

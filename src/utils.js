@@ -1,3 +1,5 @@
+export const DEFAULT_ICON_SIZE = "32px";
+
 export function adjustColorBrightness(hex, brightness) {
   // validate hex string
   hex = String(hex).replace(/[^0-9a-f]/gi, "");

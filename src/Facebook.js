@@ -3,23 +3,24 @@ import PropTypes from "prop-types";
 
 import FaFacebookSquare from "react-icons/lib/fa/facebook-square";
 
-import { adjustColorBrightness } from "./utils";
+import { DEFAULT_ICON_SIZE, adjustColorBrightness } from "./utils";
 
 const Facebook = function(props) {
+  const size = `${props.size || DEFAULT_ICON_SIZE}`;
   const url = `u=${props.url || location.href}`;
   const shareUrl = encodeURI(
     `https://www.facebook.com/sharer/sharer.php?${url}`
   );
 
-  const baseColor = "#3B5998",
-    hoverColor = adjustColorBrightness(baseColor, -0.08),
+  const baseColor = props.color || "#3B5998",
+    hoverColor = adjustColorBrightness(baseColor, -0.1),
     activeColor = adjustColorBrightness(baseColor, -0.2);
 
   return (
     <a
       href={shareUrl}
       target="popup"
-      style={{ color: baseColor }}
+      style={{ fontSize: size, color: baseColor }}
       onMouseOver={e => (e.currentTarget.style.color = hoverColor)}
       onMouseOut={e => (e.currentTarget.style.color = baseColor)}
       onMouseUp={e => (e.currentTarget.style.color = baseColor)}
@@ -36,7 +37,9 @@ const Facebook = function(props) {
 };
 
 Facebook.propTypes = {
-  url: PropTypes.string
+  url: PropTypes.string,
+  color: PropTypes.string,
+  size: PropTypes.string
 };
 
 export default Facebook;

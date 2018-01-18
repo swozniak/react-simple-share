@@ -1,7 +1,8 @@
 {
   "name": "react-simple-share",
   "version": "0.1.0",
-  "description": "React component buttons that open popups to share your link on Facebook, Twitter, Reddit, Pinterest, LinkedIn, and Google+, without the client downloading heavy third-party sharing dependencies.",
+  "description":
+    "React component buttons that open popups to share your link on Facebook, Twitter, Reddit, Pinterest, LinkedIn, and Google+, without the client downloading heavy third-party sharing dependencies.",
   "main": "build/index.js",
   "license": "MIT",
   "author": {
@@ -23,7 +24,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "react": "^15.5.4",
+    "react": "^16.2.0",
     "react-dom": "^15.0.0",
     "react-icons": "^2.2.7",
     "webpack": "^2.6.1"
@@ -31,15 +32,24 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "babel-jest": "^22.1.0",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.5.1"
+    "babel-preset-env": "^1.5.1",
+    "react-test-renderer": "^16.2.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "update-snapshots": "jest --updateSnapshot"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "keywords": [
     "social-media",
