@@ -64,7 +64,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -99,17 +99,85 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(18)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(19)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(17)();
+  module.exports = __webpack_require__(18)();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var IconBase = function IconBase(_ref, _ref2) {
+  var children = _ref.children;
+  var color = _ref.color;
+  var size = _ref.size;
+  var style = _ref.style;
+  var width = _ref.width;
+  var height = _ref.height;
+
+  var props = _objectWithoutProperties(_ref, ['children', 'color', 'size', 'style', 'width', 'height']);
+
+  var _ref2$reactIconBase = _ref2.reactIconBase;
+  var reactIconBase = _ref2$reactIconBase === undefined ? {} : _ref2$reactIconBase;
+
+  var computedSize = size || reactIconBase.size || '1em';
+  return _react2.default.createElement('svg', _extends({
+    children: children,
+    fill: 'currentColor',
+    preserveAspectRatio: 'xMidYMid meet',
+    height: height || computedSize,
+    width: width || computedSize
+  }, reactIconBase, props, {
+    style: _extends({
+      verticalAlign: 'middle',
+      color: color || reactIconBase.color
+    }, reactIconBase.style || {}, style)
+  }));
+};
+
+IconBase.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  height: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  style: _propTypes2.default.object
+};
+
+IconBase.contextTypes = {
+  reactIconBase: _propTypes2.default.shape(IconBase.propTypes)
+};
+
+exports.default = IconBase;
+module.exports = exports['default'];
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -299,7 +367,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -341,7 +409,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -398,10 +466,10 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -420,7 +488,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -434,7 +502,7 @@ module.exports = ReactPropTypesSecret;
 
 
 
-var emptyFunction = __webpack_require__(3);
+var emptyFunction = __webpack_require__(4);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -486,10 +554,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -511,18 +579,39 @@ var _facebookSquare = __webpack_require__(27);
 
 var _facebookSquare2 = _interopRequireDefault(_facebookSquare);
 
+var _utils = __webpack_require__(26);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Facebook = function Facebook(props) {
   var url = "u=" + (props.url || location.href);
   var shareUrl = encodeURI("https://www.facebook.com/sharer/sharer.php?" + url);
 
+  var baseColor = "#3B5998",
+      hoverColor = (0, _utils.adjustColorBrightness)(baseColor, -0.08),
+      activeColor = (0, _utils.adjustColorBrightness)(baseColor, -0.2);
+
   return _react2.default.createElement(
     "a",
     {
-      style: { color: "#3B5998" },
       href: shareUrl,
       target: "popup",
+      style: { color: baseColor },
+      onMouseOver: function onMouseOver(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
+      onMouseOut: function onMouseOut(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseUp: function onMouseUp(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseDown: function onMouseDown(e) {
+        return e.currentTarget.style.color = activeColor;
+      },
+      onFocus: function onFocus(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
       onClick: function onClick() {
         window.open(shareUrl, "popup", "width=600,height=480");
         return false;
@@ -537,56 +626,6 @@ Facebook.propTypes = {
 };
 
 exports.default = Facebook;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _googlePlusSquare = __webpack_require__(21);
-
-var _googlePlusSquare2 = _interopRequireDefault(_googlePlusSquare);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GooglePlus = function GooglePlus(props) {
-  var url = "url=" + (props.url || location.href);
-  var shareUrl = encodeURI("https://plus.google.com/share?" + url);
-
-  return _react2.default.createElement(
-    "a",
-    {
-      style: { color: "#DB4437" },
-      href: shareUrl,
-      target: "popup",
-      onClick: function onClick() {
-        window.open(shareUrl, "popup", "width=400,height=480");
-        return false;
-      }
-    },
-    _react2.default.createElement(_googlePlusSquare2.default, null)
-  );
-};
-
-GooglePlus.propTypes = {
-  url: _propTypes2.default.string
-};
-
-exports.default = GooglePlus;
 
 /***/ }),
 /* 9 */
@@ -607,41 +646,57 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _linkedinSquare = __webpack_require__(22);
+var _googlePlusSquare = __webpack_require__(20);
 
-var _linkedinSquare2 = _interopRequireDefault(_linkedinSquare);
+var _googlePlusSquare2 = _interopRequireDefault(_googlePlusSquare);
+
+var _utils = __webpack_require__(26);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var LinkedIn = function LinkedIn(props) {
+var GooglePlus = function GooglePlus(props) {
   var url = "url=" + (props.url || location.href);
-  var title = "&title=" + (props.title || document.title);
-  var summary = props.summary ? "&summary=" + props.summary : "";
+  var shareUrl = encodeURI("https://plus.google.com/share?" + url);
 
-  var shareUrl = encodeURI("https://www.linkedin.com/shareArticle?mini=true&" + url + title + summary);
+  var baseColor = "#DB4437",
+      hoverColor = (0, _utils.adjustColorBrightness)(baseColor, -0.08),
+      activeColor = (0, _utils.adjustColorBrightness)(baseColor, -0.2);
 
   return _react2.default.createElement(
     "a",
     {
-      style: { color: "#007BB5" },
       href: shareUrl,
       target: "popup",
+      style: { color: baseColor },
+      onMouseOver: function onMouseOver(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
+      onMouseOut: function onMouseOut(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseUp: function onMouseUp(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseDown: function onMouseDown(e) {
+        return e.currentTarget.style.color = activeColor;
+      },
+      onFocus: function onFocus(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
       onClick: function onClick() {
         window.open(shareUrl, "popup", "width=400,height=480");
         return false;
       }
     },
-    _react2.default.createElement(_linkedinSquare2.default, null)
+    _react2.default.createElement(_googlePlusSquare2.default, null)
   );
 };
 
-LinkedIn.propTypes = {
-  url: _propTypes2.default.string,
-  title: _propTypes2.default.string,
-  summary: _propTypes2.default.string
+GooglePlus.propTypes = {
+  url: _propTypes2.default.string
 };
 
-exports.default = LinkedIn;
+exports.default = GooglePlus;
 
 /***/ }),
 /* 10 */
@@ -662,43 +717,61 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _pinterestSquare = __webpack_require__(23);
+var _linkedinSquare = __webpack_require__(21);
 
-var _pinterestSquare2 = _interopRequireDefault(_pinterestSquare);
+var _linkedinSquare2 = _interopRequireDefault(_linkedinSquare);
+
+var _utils = __webpack_require__(26);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Pinterest = function Pinterest(props) {
+var LinkedIn = function LinkedIn(props) {
   var url = "url=" + (props.url || location.href);
   var title = "&title=" + (props.title || document.title);
-  var media = props.media ? "&media=" + props.media : "";
-  var description = props.description ? "description=" + props.description : "";
+  var summary = props.summary ? "&summary=" + props.summary : "";
+  var shareUrl = encodeURI("https://www.linkedin.com/shareArticle?mini=true&" + url + title + summary);
 
-  var shareUrl = encodeURI("https://www.pinterest.com/pin/create/button/?" + url + title + media + description);
+  var baseColor = "#007BB5",
+      hoverColor = (0, _utils.adjustColorBrightness)(baseColor, -0.08),
+      activeColor = (0, _utils.adjustColorBrightness)(baseColor, -0.2);
 
   return _react2.default.createElement(
     "a",
     {
-      style: { color: "#BD081C" },
       href: shareUrl,
       target: "popup",
+      style: { color: baseColor },
+      onMouseOver: function onMouseOver(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
+      onMouseOut: function onMouseOut(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseUp: function onMouseUp(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseDown: function onMouseDown(e) {
+        return e.currentTarget.style.color = activeColor;
+      },
+      onFocus: function onFocus(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
       onClick: function onClick() {
         window.open(shareUrl, "popup", "width=400,height=480");
         return false;
       }
     },
-    _react2.default.createElement(_pinterestSquare2.default, null)
+    _react2.default.createElement(_linkedinSquare2.default, null)
   );
 };
 
-Pinterest.propTypes = {
+LinkedIn.propTypes = {
   url: _propTypes2.default.string,
   title: _propTypes2.default.string,
-  media: _propTypes2.default.string,
-  description: _propTypes2.default.string
+  summary: _propTypes2.default.string
 };
 
-exports.default = Pinterest;
+exports.default = LinkedIn;
 
 /***/ }),
 /* 11 */
@@ -719,38 +792,63 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _redditSquare = __webpack_require__(24);
+var _pinterestSquare = __webpack_require__(22);
 
-var _redditSquare2 = _interopRequireDefault(_redditSquare);
+var _pinterestSquare2 = _interopRequireDefault(_pinterestSquare);
+
+var _utils = __webpack_require__(26);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Reddit = function Reddit(props) {
+var Pinterest = function Pinterest(props) {
   var url = "url=" + (props.url || location.href);
-  var title = props.title ? "&title=\"" + props.title : "";
-  var shareUrl = encodeURI("http://www.reddit.com/submit/?" + url + title);
+  var title = "&title=" + (props.title || document.title);
+  var media = props.media ? "&media=" + props.media : "";
+  var description = props.description ? "description=" + props.description : "";
+
+  var shareUrl = encodeURI("https://www.pinterest.com/pin/create/button/?" + url + title + media + description);
+  var baseColor = "#BD081C",
+      hoverColor = (0, _utils.adjustColorBrightness)(baseColor, -0.08),
+      activeColor = (0, _utils.adjustColorBrightness)(baseColor, -0.2);
 
   return _react2.default.createElement(
     "a",
     {
-      style: { color: "#336699" },
       href: shareUrl,
       target: "popup",
+      style: { color: baseColor },
+      onMouseOver: function onMouseOver(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
+      onMouseOut: function onMouseOut(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseUp: function onMouseUp(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseDown: function onMouseDown(e) {
+        return e.currentTarget.style.color = activeColor;
+      },
+      onFocus: function onFocus(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
       onClick: function onClick() {
-        window.open(shareUrl, "popup", "width=640,height=480");
+        window.open(shareUrl, "popup", "width=400,height=480");
         return false;
       }
     },
-    _react2.default.createElement(_redditSquare2.default, null)
+    _react2.default.createElement(_pinterestSquare2.default, null)
   );
 };
 
-Reddit.propTypes = {
+Pinterest.propTypes = {
   url: _propTypes2.default.string,
-  title: _propTypes2.default.string
+  title: _propTypes2.default.string,
+  media: _propTypes2.default.string,
+  description: _propTypes2.default.string
 };
 
-exports.default = Reddit;
+exports.default = Pinterest;
 
 /***/ }),
 /* 12 */
@@ -771,41 +869,59 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _tumblrSquare = __webpack_require__(25);
+var _redditSquare = __webpack_require__(23);
 
-var _tumblrSquare2 = _interopRequireDefault(_tumblrSquare);
+var _redditSquare2 = _interopRequireDefault(_redditSquare);
+
+var _utils = __webpack_require__(26);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Tumblr = function Tumblr(props) {
+var Reddit = function Reddit(props) {
   var url = "url=" + (props.url || location.href);
-  var name = "&name=" + (props.name || document.title);
-  var description = props.description ? "&description=" + props.description : "";
+  var title = props.title ? "&title=\"" + props.title : "";
+  var shareUrl = encodeURI("http://www.reddit.com/submit/?" + url + title);
 
-  var shareUrl = encodeURI("http://www.tumblr.com/share/link?" + url + name + description);
+  var baseColor = "#336699",
+      hoverColor = (0, _utils.adjustColorBrightness)(baseColor, -0.08),
+      activeColor = (0, _utils.adjustColorBrightness)(baseColor, -0.2);
 
   return _react2.default.createElement(
     "a",
     {
-      style: { color: "#35465D" },
       href: shareUrl,
       target: "popup",
+      style: { color: baseColor },
+      onMouseOver: function onMouseOver(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
+      onMouseOut: function onMouseOut(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseUp: function onMouseUp(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseDown: function onMouseDown(e) {
+        return e.currentTarget.style.color = activeColor;
+      },
+      onFocus: function onFocus(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
       onClick: function onClick() {
-        window.open(shareUrl, "popup", "width=400,height=480");
+        window.open(shareUrl, "popup", "width=640,height=480");
         return false;
       }
     },
-    _react2.default.createElement(_tumblrSquare2.default, null)
+    _react2.default.createElement(_redditSquare2.default, null)
   );
 };
 
-Tumblr.propTypes = {
+Reddit.propTypes = {
   url: _propTypes2.default.string,
-  name: _propTypes2.default.string,
-  description: _propTypes2.default.string
+  title: _propTypes2.default.string
 };
 
-exports.default = Tumblr;
+exports.default = Reddit;
 
 /***/ }),
 /* 13 */
@@ -826,9 +942,86 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _twitterSquare = __webpack_require__(26);
+var _tumblrSquare = __webpack_require__(24);
+
+var _tumblrSquare2 = _interopRequireDefault(_tumblrSquare);
+
+var _utils = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Tumblr = function Tumblr(props) {
+  var url = "url=" + (props.url || location.href);
+  var name = "&name=" + (props.name || document.title);
+  var description = props.description ? "&description=" + props.description : "";
+  var shareUrl = encodeURI("http://www.tumblr.com/share/link?" + url + name + description);
+
+  var baseColor = "#35465D",
+      hoverColor = (0, _utils.adjustColorBrightness)(baseColor, -0.08),
+      activeColor = (0, _utils.adjustColorBrightness)(baseColor, -0.2);
+
+  return _react2.default.createElement(
+    "a",
+    {
+      href: shareUrl,
+      target: "popup",
+      style: { color: baseColor },
+      onMouseOver: function onMouseOver(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
+      onMouseOut: function onMouseOut(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseUp: function onMouseUp(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseDown: function onMouseDown(e) {
+        return e.currentTarget.style.color = activeColor;
+      },
+      onFocus: function onFocus(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
+      onClick: function onClick() {
+        window.open(shareUrl, "popup", "width=400,height=480");
+        return false;
+      }
+    },
+    _react2.default.createElement(_tumblrSquare2.default, null)
+  );
+};
+
+Tumblr.propTypes = {
+  url: _propTypes2.default.string,
+  name: _propTypes2.default.string,
+  description: _propTypes2.default.string
+};
+
+exports.default = Tumblr;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _twitterSquare = __webpack_require__(25);
 
 var _twitterSquare2 = _interopRequireDefault(_twitterSquare);
+
+var _utils = __webpack_require__(26);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -838,15 +1031,33 @@ var Twitter = function Twitter(props) {
   var hashtags = props.hashtags ? "&hashtags=" + props.hashtags : "";
   var via = props.via ? "&via=" + props.via : "";
   var related = props.related ? "&related=" + props.related : "";
-
   var shareUrl = encodeURI("https://twitter.com/intent/tweet/?" + url + text + hashtags + via + related);
+
+  var baseColor = "#1DA1F2",
+      hoverColor = (0, _utils.adjustColorBrightness)(baseColor, -0.05),
+      activeColor = (0, _utils.adjustColorBrightness)(baseColor, -0.2);
 
   return _react2.default.createElement(
     "a",
     {
-      style: { color: "#1DA1F2" },
       href: shareUrl,
       target: "popup",
+      style: { color: baseColor },
+      onMouseOver: function onMouseOver(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
+      onMouseOut: function onMouseOut(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseUp: function onMouseUp(e) {
+        return e.currentTarget.style.color = baseColor;
+      },
+      onMouseDown: function onMouseDown(e) {
+        return e.currentTarget.style.color = activeColor;
+      },
+      onFocus: function onFocus(e) {
+        return e.currentTarget.style.color = hoverColor;
+      },
       onClick: function onClick() {
         window.open(shareUrl, "popup", "width=400,height=480");
         return false;
@@ -867,7 +1078,7 @@ Twitter.PropTypes = {
 exports.default = Twitter;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -882,31 +1093,31 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Facebook = __webpack_require__(7);
+var _Facebook = __webpack_require__(8);
 
 var _Facebook2 = _interopRequireDefault(_Facebook);
 
-var _Twitter = __webpack_require__(13);
+var _Twitter = __webpack_require__(14);
 
 var _Twitter2 = _interopRequireDefault(_Twitter);
 
-var _Tumblr = __webpack_require__(12);
+var _Tumblr = __webpack_require__(13);
 
 var _Tumblr2 = _interopRequireDefault(_Tumblr);
 
-var _Pinterest = __webpack_require__(10);
+var _Pinterest = __webpack_require__(11);
 
 var _Pinterest2 = _interopRequireDefault(_Pinterest);
 
-var _Reddit = __webpack_require__(11);
+var _Reddit = __webpack_require__(12);
 
 var _Reddit2 = _interopRequireDefault(_Reddit);
 
-var _LinkedIn = __webpack_require__(9);
+var _LinkedIn = __webpack_require__(10);
 
 var _LinkedIn2 = _interopRequireDefault(_LinkedIn);
 
-var _GooglePlus = __webpack_require__(8);
+var _GooglePlus = __webpack_require__(9);
 
 var _GooglePlus2 = _interopRequireDefault(_GooglePlus);
 
@@ -921,12 +1132,12 @@ exports.LinkedInShareButton = _LinkedIn2.default;
 exports.GooglePlusShareButton = _GooglePlus2.default;
 
 
-var SimpleSocialSharer = function SimpleSocialSharer(props) {
+var SimpleShare = function SimpleShare(props) {
   var shareUrl = encodeURI(props.url || window.location.href);
 
   return _react2.default.createElement(
     "div",
-    { className: "SimpleSocialSharer" },
+    { className: "SimpleShare" },
     _react2.default.createElement(
       "h2",
       { style: { marginBottom: 0 } },
@@ -946,10 +1157,10 @@ var SimpleSocialSharer = function SimpleSocialSharer(props) {
   );
 };
 
-exports.default = SimpleSocialSharer;
+exports.default = SimpleShare;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1046,7 +1257,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1060,9 +1271,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(4);
-  var warning = __webpack_require__(6);
-  var ReactPropTypesSecret = __webpack_require__(5);
+  var invariant = __webpack_require__(5);
+  var warning = __webpack_require__(7);
+  var ReactPropTypesSecret = __webpack_require__(6);
   var loggedTypeFailures = {};
 }
 
@@ -1110,10 +1321,10 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1126,9 +1337,9 @@ module.exports = checkPropTypes;
 
 
 
-var emptyFunction = __webpack_require__(3);
-var invariant = __webpack_require__(4);
-var ReactPropTypesSecret = __webpack_require__(5);
+var emptyFunction = __webpack_require__(4);
+var invariant = __webpack_require__(5);
+var ReactPropTypesSecret = __webpack_require__(6);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -1178,7 +1389,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1191,13 +1402,13 @@ module.exports = function() {
 
 
 
-var emptyFunction = __webpack_require__(3);
-var invariant = __webpack_require__(4);
-var warning = __webpack_require__(6);
-var assign = __webpack_require__(15);
+var emptyFunction = __webpack_require__(4);
+var invariant = __webpack_require__(5);
+var warning = __webpack_require__(7);
+var assign = __webpack_require__(16);
 
-var ReactPropTypesSecret = __webpack_require__(5);
-var checkPropTypes = __webpack_require__(16);
+var ReactPropTypesSecret = __webpack_require__(6);
+var checkPropTypes = __webpack_require__(17);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -1725,79 +1936,10 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   return ReactPropTypes;
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-var IconBase = function IconBase(_ref, _ref2) {
-  var children = _ref.children;
-  var color = _ref.color;
-  var size = _ref.size;
-  var style = _ref.style;
-  var width = _ref.width;
-  var height = _ref.height;
-
-  var props = _objectWithoutProperties(_ref, ['children', 'color', 'size', 'style', 'width', 'height']);
-
-  var _ref2$reactIconBase = _ref2.reactIconBase;
-  var reactIconBase = _ref2$reactIconBase === undefined ? {} : _ref2$reactIconBase;
-
-  var computedSize = size || reactIconBase.size || '1em';
-  return _react2.default.createElement('svg', _extends({
-    children: children,
-    fill: 'currentColor',
-    preserveAspectRatio: 'xMidYMid meet',
-    height: height || computedSize,
-    width: width || computedSize
-  }, reactIconBase, props, {
-    style: _extends({
-      verticalAlign: 'middle',
-      color: color || reactIconBase.color
-    }, reactIconBase.style || {}, style)
-  }));
-};
-
-IconBase.propTypes = {
-  color: _propTypes2.default.string,
-  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
-  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
-  height: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
-  style: _propTypes2.default.object
-};
-
-IconBase.contextTypes = {
-  reactIconBase: _propTypes2.default.shape(IconBase.propTypes)
-};
-
-exports.default = IconBase;
-module.exports = exports['default'];
-
-/***/ }),
-/* 20 */,
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1813,7 +1955,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactIconBase = __webpack_require__(19);
+var _reactIconBase = __webpack_require__(2);
 
 var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -1835,7 +1977,7 @@ exports.default = FaGooglePlusSquare;
 module.exports = exports['default'];
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1851,7 +1993,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactIconBase = __webpack_require__(19);
+var _reactIconBase = __webpack_require__(2);
 
 var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -1873,7 +2015,7 @@ exports.default = FaLinkedinSquare;
 module.exports = exports['default'];
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1889,7 +2031,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactIconBase = __webpack_require__(19);
+var _reactIconBase = __webpack_require__(2);
 
 var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -1911,7 +2053,7 @@ exports.default = FaPinterestSquare;
 module.exports = exports['default'];
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1927,7 +2069,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactIconBase = __webpack_require__(19);
+var _reactIconBase = __webpack_require__(2);
 
 var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -1949,7 +2091,7 @@ exports.default = FaRedditSquare;
 module.exports = exports['default'];
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1965,7 +2107,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactIconBase = __webpack_require__(19);
+var _reactIconBase = __webpack_require__(2);
 
 var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -1987,7 +2129,7 @@ exports.default = FaTumblrSquare;
 module.exports = exports['default'];
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2003,7 +2145,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactIconBase = __webpack_require__(19);
+var _reactIconBase = __webpack_require__(2);
 
 var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 
@@ -2025,6 +2167,35 @@ exports.default = FaTwitterSquare;
 module.exports = exports['default'];
 
 /***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.adjustColorBrightness = adjustColorBrightness;
+function adjustColorBrightness(hex, brightness) {
+  // validate hex string
+  hex = String(hex).replace(/[^0-9a-f]/gi, "");
+  if (hex.length === 3) {
+    hex = "" + hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+  }
+  brightness = brightness || 0;
+
+  var rgb = "#";
+  for (var i = 0; i < 3; i++) {
+    var decimalColor = parseInt(hex.substr(i * 2, 2), 16); // convert to decimal
+    decimalColor = Math.round(Math.min(Math.max(0, decimalColor + decimalColor * brightness), 255)).toString(16); // change brightness
+    rgb += ("00" + decimalColor).substr(decimalColor.length);
+  }
+
+  return rgb;
+}
+
+/***/ }),
 /* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2041,7 +2212,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactIconBase = __webpack_require__(19);
+var _reactIconBase = __webpack_require__(2);
 
 var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
 

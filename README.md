@@ -1,6 +1,6 @@
-# react-simple-social-sharer
+# react-simple-sharer
 
-[![NPM](https://nodei.co/npm/react-simple-social-sharer.png)](https://www.npmjs.com/package/react-simple-social-sharer)
+[![NPM](https://nodei.co/npm/react-simple-sharer.png)](https://www.npmjs.com/package/react-simple-sharer)
 
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
@@ -11,7 +11,7 @@ Adds buttons with link sharing popups for Facebook, Twitter, Reddit, Pinterest, 
 Use [npm](https://npmjs.com/) to install.
 
 ```sh
-npm install react-simple-social-sharer --save
+npm install react-simple-sharer --save
 ```
 
 ## Usage

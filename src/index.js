@@ -21,12 +21,12 @@ export { LinkedIn as LinkedInShareButton };
 import GooglePlus from "./GooglePlus";
 export { GooglePlus as GooglePlusShareButton };
 
-const SimpleSocialSharer = props => {
+const SimpleShare = props => {
   const shareUrl = encodeURI(props.url || window.location.href);
-  
+
   return (
-    <div className="SimpleSocialSharer">
-    <h2 style={{ marginBottom: 0 }}>Share:</h2>
+    <div className="SimpleShare">
+      <h2 style={{ marginBottom: 0 }}>Share:</h2>
       <span style={{ fontSize: "48px" }}>
         <Facebook url={shareUrl} />
         <Twitter url={shareUrl} />
@@ -40,4 +40,4 @@ const SimpleSocialSharer = props => {
   );
 };
 
-export default SimpleSocialSharer;
+export default SimpleShare;

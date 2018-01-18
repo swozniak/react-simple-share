@@ -1,6 +1,6 @@
 {
-  "name": "react-simple-social-sharer",
-  "version": "1.0.0",
+  "name": "react-simple-share",
+  "version": "0.1.0",
   "description": "React component buttons that open popups to share your link on Facebook, Twitter, Reddit, Pinterest, LinkedIn, and Google+, without the client downloading heavy third-party sharing dependencies.",
   "main": "build/index.js",
   "license": "MIT",
@@ -11,18 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/swozniak/react-simple-social-sharer.git"
+    "url": "git://github.com/swozniak/react-simple-share.git"
   },
-  "homepage": "https://github.com/swozniak/react-simple-social-sharer",
+  "homepage": "https://github.com/swozniak/react-simple-share",
   "bugs": {
-    "url": "https://github.com/swozniak/react-simple-social-sharer/issues"
+    "url": "https://github.com/swozniak/react-simple-share/issues"
   },
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^15.5.4",
+    "react-dom": "^0.14.0 || ^15.0.0 || ^16.0.0"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^15.5.4",
+    "react-dom": "^15.0.0",
     "react-icons": "^2.2.7",
     "webpack": "^2.6.1"
   },
@@ -42,6 +44,8 @@
   "keywords": [
     "social-media",
     "social",
+    "simple-share",
+    "simple-sharer",
     "share",
     "share-button",
     "share-buttons",
@@ -50,6 +54,7 @@
     "react-component",
     "facebook",
     "twitter",
+    "tumblr",
     "reddit",
     "pinterest",
     "linkedin",
