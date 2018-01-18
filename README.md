@@ -1,34 +1,32 @@
 # react-simple-sharer
 
-[![NPM](https://nodei.co/npm/react-simple-sharer.png)](https://www.npmjs.com/package/react-simple-sharer)
+[![NPM](https://nodei.co/npm/react-simple-share.png)](https://www.npmjs.com/package/react-simple-share)
 
-[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+Adds buttons with link sharing popups for Facebook, Twitter, Tumblr, Reddit, Pinterest, LinkedIn, and Google+, without waiting for third-party libraries to load.
 
-Adds buttons with link sharing popups for Facebook, Twitter, Reddit, Pinterest, LinkedIn, and Google+, without requiring your user to download heavy third-party sharing dependencies.
+Creates a link to the current page by default, but can accept a specific URL instead (and some other options, based on the site).
 
 ## Install
 
 Use [npm](https://npmjs.com/) to install.
 
 ```sh
-npm install react-simple-sharer --save
+npm install react-simple-share --save
 ```
 
-## Usage
+## Basic Use
 
-You can pick and choose buttons...
+You can pick and choose which buttons to use...
 
 ```js
 import { FacebookShareButton, TwitterShareButton } from "react-simple-share";
 
-const YourComponent = props => {
+export default const YourComponent = props => {
   return (
     <div>
-      <h3>Share this component!</h3>
-      <FacebookShareButton url="https://swozniak.github.io/react-simple-sharer/" />
+      <h3>Share this page!</h3>
+      <FacebookShareButton />
       <TwitterShareButton
-        url="https://swozniak.github.io/react-simple-sharer/"
-        text="Check out this free React Simple Social Media Sharing component!"
         via="stephanwozniak"
         related="chillective"
         hashtags="npm,react,free,socialmedia"
@@ -38,13 +36,184 @@ const YourComponent = props => {
 };
 ```
 
-Or, load them all at once:
+...or, load them all at once.
 
 ```js
 import { SimpleShareButtons } from "react-simple-share";
+
+const YourComponent = props => {
+  return (
+    <SimpleShareButtons
+      url="https://github.com/swozniak"
+      size="60px"
+      color="#000"
+    />
+  );
+};
 ```
 
-### Additional Props
+## Complete List of Supported Props
+
+### SimpleShareButtons
+
+```js
+import { SimpleShareButtons } from "react-simple-share";
+
+const YourComponent = props => (
+  <SimpleShareButtons
+    url="https://github.com/swozniak/react-simple-share" // (string) Optional. The URL to use in the share dialog. Defaults to current page.
+    color="#03A9F4" // (string) Optional. Specify a 3-character or 6-character hex code. Include the "#".
+    size="80px" // (string) Optional, include "px" or "em" like you would with a "font-size" tag.
+  />
+);
+```
+
+You can also pass a list consisting of the buttons you want to be included.
+
+```js
+import { SimpleShareButtons } from "react-simple-share";
+
+const YourComponent = props => (
+  <SimpleShareButtons
+    whitelist={[
+      "Facebook",
+      "Twitter",
+      "Tumblr",
+      "Reddit",
+      "Pinterest",
+      "LinkedIn",
+      "Google+"
+    ]} // (array of strings) Optional whitelist of buttons to generate
+  />
+);
+```
+
+### Facebook
+
+```js
+import { FacebookShareButton } from "react-simple-share";
+
+const YourComponent = props => (
+  <FacebookShareButton
+    url="https://github.com/swozniak/react-simple-share/" // (string) Optional, the URL to use in the share dialog. Defaults to current page.
+    size="40px" // (string) Optional, include "px" or "em" like you would with a "font-size" tag.
+    color="#37474F" // (string) Optional, include "#", specify as 3-character or 6-character hex code
+  />
+);
+```
+
+### Twitter
+
+```js
+import { TwitterShareButton } from "react-simple-share";
+
+const YourComponent = props => (
+  <TwitterShareButton
+    url="https://github.com/swozniak/react-simple-share/"
+    size="40px"
+    color="#37474F"
+    text="I'm previewing this free React Component by @stephanwozniak, made for easily sharing pages on social media sites!"
+    hashtags="reactsimpleshare,javascript,react"
+    via="github"
+    related="stephanwozniak,chillective"
+  />
+);
+```
+
+### Tumblr
+
+```js
+import { TumblrShareButton } from "react-simple-share";
+
+const YourComponent = props => (
+  <TumblrShareButton
+    url="https://github.com/swozniak/react-simple-share/"
+    size="40px"
+    color="#37474F"
+    title="React Simple Share - free component by @stephanwozniak"
+    caption="I'm previewing this free React Component by @stephanwozniak, made for easily sharing pages on social media sites!"
+    tags="reactsimpleshare,javascript,react"
+  />
+);
+```
+
+### Pinterest
+
+```js
+import { PinterestShareButton } from "react-simple-share";
+
+const YourComponent = props => (
+  <PinterestShareButton
+    url="https://github.com/swozniak/react-simple-share/"
+    size="40px"
+    color="#37474F"
+    media="WATAPP.jpg"
+    description="I'm previewing this free React Component by @stephanwozniak, made for easily sharing pages on social media sites!"
+  />
+);
+```
+
+### Reddit
+
+```js
+import { RedditShareButton } from "react-simple-share";
+
+const YourComponent = props => (
+  <RedditShareButton
+    url="https://github.com/swozniak/react-simple-share/"
+    size="40px"
+    color="#37474F"
+    title="Simple Share - a free react component by @stephanwozniak, made for easily sharing links on social media sites!"
+  />
+);
+```
+
+### LinkedIn
+
+```js
+import { LinkedInShareButton } from "react-simple-share";
+
+const YourComponent = props => (
+  <LinkedInShareButton
+    url="https://github.com/swozniak/react-simple-share/"
+    size="40px"
+    color="#37474F"
+    title="React Simple Share"
+    summary="A free react component by @stephanwozniak, made for easily sharing links on social media sites!"
+  />
+);
+```
+
+### Google+
+
+```js
+import { GooglePlusShareButton } from "react-simple-share";
+
+const YourComponent = props => (
+  <GooglePlusShareButton
+    url="https://github.com/swozniak/react-simple-share/"
+    size="40px"
+    color="#37474F"
+    title="React Simple Share"
+    summary="A free react component by @stephanwozniak, made for easily sharing links on social media sites!"
+  />
+);
+```
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
 
 | Button    | Required                                                                    | Optional                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
