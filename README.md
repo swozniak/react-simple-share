@@ -2,11 +2,26 @@
 
 [![NPM](https://nodei.co/npm/react-simple-share.png)](https://www.npmjs.com/package/react-simple-share)
 
-Adds buttons with link sharing popups for Facebook, Twitter, Tumblr, Reddit, Pinterest, LinkedIn, and Google+, without waiting for third-party libraries to load.
+[![npm version](https://badge.fury.io/js/react-simple-share.svg)](https://badge.fury.io/js/react-simple-share)
+[![Download Count](http://img.shields.io/npm/dm/react-simple-share.svg?style=flat-square)](https://npmjs.org/package/react-simple-share)
 
-Creates a link to the current page by default, but can accept a specific URL instead (and some other options, based on the site).
+Add social media sharing buttons to your React app for a number of popular social media sites.
 
-## Install
+This component leverages the URL sharing features of each service, so no third-party code needs to be loaded. This results in less network requests and a better loading experience for your users.
+
+Supported networks:
+
+* Facebook
+* Twitter
+* Tumblr
+* Reddit
+* Pinterest
+* LinkedIn
+* Google+
+
+By default, the buttons share the link to the current page. However, you can pass in a custom prop for a specific URL instead (along with some other customization options, too).
+
+## Installation
 
 Use [npm](https://npmjs.com/) to install.
 
@@ -14,61 +29,53 @@ Use [npm](https://npmjs.com/) to install.
 npm install react-simple-share --save
 ```
 
-## Basic Use
+## Quick Start: Shared links point to current page
 
 You can pick and choose which buttons to use...
 
 ```js
 import { FacebookShareButton, TwitterShareButton } from "react-simple-share";
 
-export default const YourComponent = props => {
+const YourComponent = props => {
   return (
     <div>
       <h3>Share this page!</h3>
       <FacebookShareButton />
-      <TwitterShareButton
-        via="stephanwozniak"
-        related="chillective"
-        hashtags="npm,react,free,socialmedia"
-      />
+      <TwitterShareButton />
     </div>
   );
 };
 ```
 
-...or, load them all at once.
+...or, show the full set.
 
 ```js
 import { SimpleShareButtons } from "react-simple-share";
 
 const YourComponent = props => {
-  return (
-    <SimpleShareButtons
-      url="https://github.com/swozniak"
-      size="60px"
-      color="#000"
-    />
-  );
+  return <SimpleShareButtons />;
 };
 ```
 
-## Complete List of Supported Props
+## API by Component
 
-### SimpleShareButtons
+### <SimpleShareButtons \/>
+
+#### Example
 
 ```js
 import { SimpleShareButtons } from "react-simple-share";
 
 const YourComponent = props => (
   <SimpleShareButtons
-    url="https://github.com/swozniak/react-simple-share" // (string) Optional. The URL to use in the share dialog. Defaults to current page.
-    color="#03A9F4" // (string) Optional. Specify a 3-character or 6-character hex code. Include the "#".
-    size="80px" // (string) Optional, include "px" or "em" like you would with a "font-size" tag.
+    url="https://github.com/swozniak/react-simple-share"
+    color="#03A9F4"
+    size="80px"
   />
 );
 ```
 
-You can also pass a list consisting of the buttons you want to be included.
+#### Example with **whitelist**
 
 ```js
 import { SimpleShareButtons } from "react-simple-share";
@@ -78,31 +85,50 @@ const YourComponent = props => (
     whitelist={[
       "Facebook",
       "Twitter",
-      "Tumblr",
-      "Reddit",
-      "Pinterest",
       "LinkedIn",
       "Google+"
-    ]} // (array of strings) Optional whitelist of buttons to generate
   />
 );
 ```
 
-### Facebook
+#### Supported Props
+
+| Prop          | Example                                            | Default value                                                                     | Description                                                                                                                                                                                                                    |
+| ------------- | -------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **url**       | `"https://github.com/swozniak/react-simple-share"` | Current page the user is on (`window.location.href`).                             | URL to use in the share dialog.                                                                                                                                                                                                |
+| **color**     | `"#37474F"`                                        | Hex code for a primary branding color of that service.                            | 3-character or 6-character hex code. Include the "#".                                                                                                                                                                          |
+| **size**      | `"60px"`                                           | `"32px"`                                                                          | Size to render the icon. Any units accepted by the CSS property `font-size` will work here.                                                                                                                                    |
+| **whitelist** | `["Facebook", "Twitter", "Tumblr", "Reddit"]`      | `["Facebook", "Twitter", "Tumblr", "Reddit", "Pinterest", "LinkedIn", "Google+"]` | By default, this component will render a share button for each social network supported by this module. If you only want to render share buttons for specific sites, pass in an array populated with the names of those sites. |
+|               |                                                    |                                                                                   |                                                                                                                                                                                                                                |
+
+### <FacebookShareButton \/>
+
+#### Example
 
 ```js
 import { FacebookShareButton } from "react-simple-share";
 
 const YourComponent = props => (
   <FacebookShareButton
-    url="https://github.com/swozniak/react-simple-share/" // (string) Optional, the URL to use in the share dialog. Defaults to current page.
-    size="40px" // (string) Optional, include "px" or "em" like you would with a "font-size" tag.
-    color="#37474F" // (string) Optional, include "#", specify as 3-character or 6-character hex code
+    url="https://github.com/swozniak/react-simple-share/"
+    color="#37474F"
+    size="40px"
   />
 );
 ```
 
+#### Supported Props
+
+| Prop      | Example                                            | Default value                                          | Description                                                                                 |
+| --------- | -------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| **url**   | `"https://github.com/swozniak/react-simple-share"` | Current page the user is on (`window.location.href`).  | The URL to use in the share dialog.                                                         |
+| **color** | `"#37474F"`                                        | Hex code for a primary branding color of that service. | 3-character or 6-character hex code. Include the "#".                                       |
+| **size**  | `"60px"`                                           | `"32px"`                                               | Size to render the icon. Any units accepted by the CSS property `font-size` will work here. |
+|           |                                                    |                                                        |                                                                                             |
+
 ### Twitter
+
+#### Example
 
 ```js
 import { TwitterShareButton } from "react-simple-share";
@@ -110,8 +136,8 @@ import { TwitterShareButton } from "react-simple-share";
 const YourComponent = props => (
   <TwitterShareButton
     url="https://github.com/swozniak/react-simple-share/"
-    size="40px"
     color="#37474F"
+    size="40px"
     text="I'm previewing this free React Component by @stephanwozniak, made for easily sharing pages on social media sites!"
     hashtags="reactsimpleshare,javascript,react"
     via="github"
@@ -119,6 +145,19 @@ const YourComponent = props => (
   />
 );
 ```
+
+#### Supported Props
+
+| Prop         | Example                                                                     | Default value                                          | Description                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **url**      | `"https://github.com/swozniak/react-simple-share"`                          | Current page the user is on (`window.location.href`).  | The URL to use in the share dialog.                                                                                                             |
+| **color**    | `"#37474F"`                                                                 | Hex code for a primary branding color of that service. | A 3-character or 6-character hex code. Include the "#".                                                                                         |
+| **size**     | `"60px"`                                                                    | `"32px"`                                               | Size to render the icon. Any units accepted by the CSS property `font-size` will work here.                                                     |
+| **text**     | `"Check out the free Simple Share component for React by @stephanwozniak!"` | Title of the current page (`document.title`).          | Default tweet text, which the user can edit before posting. Pass a blank string `""` if falling back to `document.title` is undesired behavior. |
+| **hashtags** | `"reactsimpleshare,javascript,react,npmjs"`                                 |                                                        | Comma-separated string of hashtags to append to the end of the tweet.                                                                           |
+| **via**      | `"stephanwozniak"`                                                          |                                                        | Twitter username for the source of the content (or your site).                                                                                  |
+| **related**  | `"stephanwozniak,chillective"`                                              |                                                        | Comma-separated string of Twitter usernames for other related Twitter accounts which may be suggested to the user later on.                     |
+|              |                                                                             |                                                        |                                                                                                                                                 |
 
 ### Tumblr
 
@@ -139,6 +178,8 @@ const YourComponent = props => (
 
 ### Pinterest
 
+#### Example
+
 ```js
 import { PinterestShareButton } from "react-simple-share";
 
@@ -155,6 +196,8 @@ const YourComponent = props => (
 
 ### Reddit
 
+#### Example
+
 ```js
 import { RedditShareButton } from "react-simple-share";
 
@@ -169,6 +212,8 @@ const YourComponent = props => (
 ```
 
 ### LinkedIn
+
+#### Example
 
 ```js
 import { LinkedInShareButton } from "react-simple-share";
@@ -186,6 +231,8 @@ const YourComponent = props => (
 
 ### Google+
 
+#### Example
+
 ```js
 import { GooglePlusShareButton } from "react-simple-share";
 
@@ -199,32 +246,6 @@ const YourComponent = props => (
   />
 );
 ```
-
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-
-| Button    | Required                                                                    | Optional                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| --------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*        | **url** (_string_): URL of the page to share. Defaults to the current page. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Facebook  |                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Twitter   |                                                                             | **text** (_string_):The passed text will appear pre-selected for a Twitter user to delete or edit before posting.<br />Example: `text="Check out this chill React Component!"`<br /><br />**hashtags** (_string_): A comma-separated list of hashtag values without the preceding # character.<br />Example: `hashtags="npm,react,component"`<br /><br />**via** (_string_): A Twitter username to associate with the Tweet, such as your site’s Twitter account. The provided username will be appended to the end of the Tweet with the text “via @username”.<br />Example: `via="stephanwozniak"`<br /><br />**related** (_string_): Suggest additional Twitter usernames related to the Tweet as comma-separated values. Twitter may suggest these accounts to follow after the user posts their Tweet.<br />Example: `related="chillective,npmjs,reactjs"` |
-| Tumblr    |                                                                             | **name** (_string_):Title for the link to be shared.<br />Example: `name="React Simple Social Sharer Component"`<br /><br />**description** (_string_):A description to go along with the shared post.<br />Example: `description="Check out this chill React Component!"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Pinterest |                                                                             | **title** (_string_):Title for the link to be shared. <br />Example: `title="React Simple Social Sharer Component"`<br /><br />**description** (_string_):A description to go along with the shared post. <br />Example: `description="Check out this chill React Component!"`<br /><br />**media** (_string_):URL to an image to be associated with this post. <br />Example: `media="https://business.pinterest.com/sites/default/files/flex_img/2017-02/1-brand-guidelines-01.jpg"`                                                                                                                                                                                                                                                                                                                                                                          |
-| Reddit    |                                                                             | **title** (_string_):Title for the link to be shared. Example: `title="React Simple Social Sharer Component"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| LinkedIn  |                                                                             | **title** (_string_):Title for the link to be shared.<br />Example: `title="React Simple Social Sharer Component"`<br /><br />**summary** (_string_):A description to go along with the shared post.<br />Example: `summary="Check out this chill React Component!"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Google+   |                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ## License
 
