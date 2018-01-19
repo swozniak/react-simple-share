@@ -19,14 +19,20 @@ Supported networks:
 * LinkedIn
 * Google+
 
-By default, the buttons share the link to the current page. However, you can pass in a custom prop for a specific URL instead (along with some other customization options, too).
+By default, the buttons will share the link to the current page. However, you can pass in a custom prop for a specific URL instead (along with some other customization options, too).
 
 ## Installation
 
-Use [npm](https://npmjs.com/) to install.
+Use [npm](https://npmjs.com/) to install:
 
 ```sh
 npm install react-simple-share --save
+```
+
+Or, if you're using [yarn](https://yarnpkg.com/):
+
+```sh
+yarn add react-simple-share
 ```
 
 ## Quick Start: Shared links point to current page
@@ -36,7 +42,7 @@ You can pick and choose which buttons to use...
 ```js
 import { FacebookShareButton, TwitterShareButton } from "react-simple-share";
 
-const YourComponent = props => {
+const YourComponent = () => {
   return (
     <div>
       <h3>Share this page!</h3>
@@ -52,35 +58,29 @@ const YourComponent = props => {
 ```js
 import { SimpleShareButtons } from "react-simple-share";
 
-const YourComponent = props => {
-  return <SimpleShareButtons />;
-};
+const YourComponent = () => <SimpleShareButtons />;
 ```
 
 ## API by Component
 
 ### <SimpleShareButtons \/>
 
-#### Example
+#### Examples
 
 ```js
 import { SimpleShareButtons } from "react-simple-share";
 
-const YourComponent = props => (
+const BasicExample = () => <SimpleShareButtons />;
+
+const OptionsExample = () => (
   <SimpleShareButtons
     url="https://github.com/swozniak/react-simple-share"
     color="#03A9F4"
     size="80px"
   />
 );
-```
 
-#### Example with **whitelist**
-
-```js
-import { SimpleShareButtons } from "react-simple-share";
-
-const YourComponent = props => (
+const WhitelistExample = () => (
   <SimpleShareButtons
     whitelist={[
       "Facebook",
@@ -93,25 +93,27 @@ const YourComponent = props => (
 
 #### Supported Props
 
-| Prop          | Example                                            | Default value                                                                     | Description                                                                                                                                                                                                                    |
-| ------------- | -------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **url**       | `"https://github.com/swozniak/react-simple-share"` | Current page the user is on (`window.location.href`).                             | URL to use in the share dialog.                                                                                                                                                                                                |
-| **color**     | `"#37474F"`                                        | Hex code for a primary branding color of that service.                            | 3-character or 6-character hex code. Include the "#".                                                                                                                                                                          |
-| **size**      | `"60px"`                                           | `"32px"`                                                                          | Size to render the icon. Any units accepted by the CSS property `font-size` will work here.                                                                                                                                    |
-| **whitelist** | `["Facebook", "Twitter", "Tumblr", "Reddit"]`      | `["Facebook", "Twitter", "Tumblr", "Reddit", "Pinterest", "LinkedIn", "Google+"]` | By default, this component will render a share button for each social network supported by this module. If you only want to render share buttons for specific sites, pass in an array populated with the names of those sites. |
-|               |                                                    |                                                                                   |                                                                                                                                                                                                                                |
+| Prop          | Default value                                                                     | Description                                                                                                                                                                                                                    |
+| ------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **url**       | Current page the user is on (`window.location.href`).                             | The URL to use in the share dialog.                                                                                                                                                                                            |
+| **color**     | Hex code for a primary branding color of that service.                            | A 3-character or 6-character hex code. Include the "#".                                                                                                                                                                        |
+| **size**      | `"32px"`                                                                          | The size to render the icon. Any units accepted by the CSS property `font-size` will work here.                                                                                                                                |
+| **whitelist** | `["Facebook", "Twitter", "Tumblr", "Reddit", "Pinterest", "LinkedIn", "Google+"]` | By default, this component will render a share button for each social network supported by this module. If you only want to render share buttons for specific sites, pass in an array populated with the names of those sites. |
+|               |                                                                                   |                                                                                                                                                                                                                                |
 
 ### <FacebookShareButton \/>
 
-#### Example
+#### Examples
 
 ```js
 import { FacebookShareButton } from "react-simple-share";
 
-const YourComponent = props => (
+const BasicExample = () => <FacebookShareButton />;
+
+const OptionsExample = () => (
   <FacebookShareButton
     url="https://github.com/swozniak/react-simple-share/"
-    color="#37474F"
+    color="#3B5998"
     size="40px"
   />
 );
@@ -119,26 +121,28 @@ const YourComponent = props => (
 
 #### Supported Props
 
-| Prop      | Example                                            | Default value                                          | Description                                                                                 |
-| --------- | -------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
-| **url**   | `"https://github.com/swozniak/react-simple-share"` | Current page the user is on (`window.location.href`).  | The URL to use in the share dialog.                                                         |
-| **color** | `"#37474F"`                                        | Hex code for a primary branding color of that service. | 3-character or 6-character hex code. Include the "#".                                       |
-| **size**  | `"60px"`                                           | `"32px"`                                               | Size to render the icon. Any units accepted by the CSS property `font-size` will work here. |
-|           |                                                    |                                                        |                                                                                             |
+| Prop      | Default value                                          | Description                                                                                     |
+| --------- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| **url**   | Current page the user is on (`window.location.href`).  | The URL to use in the share dialog.                                                             |
+| **color** | Hex code for a primary branding color of that service. | 3-character or 6-character hex code. Include the "#".                                           |
+| **size**  | `"32px"`                                               | The size to render the icon. Any units accepted by the CSS property `font-size` will work here. |
+|           |                                                        |                                                                                                 |
 
-### Twitter
+### <TwitterShareButton \/>
 
-#### Example
+#### Examples
 
 ```js
 import { TwitterShareButton } from "react-simple-share";
 
-const YourComponent = props => (
+const BasicExample = () => <TwitterShareButton />;
+
+const OptionsExample = () => (
   <TwitterShareButton
     url="https://github.com/swozniak/react-simple-share/"
-    color="#37474F"
+    color="#1DA1F2"
     size="40px"
-    text="I'm previewing this free React Component by @stephanwozniak, made for easily sharing pages on social media sites!"
+    text="Add social media sharing buttons to your React app with react-sample-share by @stephanwozniak!"
     hashtags="reactsimpleshare,javascript,react"
     via="github"
     related="stephanwozniak,chillective"
@@ -148,104 +152,162 @@ const YourComponent = props => (
 
 #### Supported Props
 
-| Prop         | Example                                                                     | Default value                                          | Description                                                                                                                                     |
-| ------------ | --------------------------------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **url**      | `"https://github.com/swozniak/react-simple-share"`                          | Current page the user is on (`window.location.href`).  | The URL to use in the share dialog.                                                                                                             |
-| **color**    | `"#37474F"`                                                                 | Hex code for a primary branding color of that service. | A 3-character or 6-character hex code. Include the "#".                                                                                         |
-| **size**     | `"60px"`                                                                    | `"32px"`                                               | Size to render the icon. Any units accepted by the CSS property `font-size` will work here.                                                     |
-| **text**     | `"Check out the free Simple Share component for React by @stephanwozniak!"` | Title of the current page (`document.title`).          | Default tweet text, which the user can edit before posting. Pass a blank string `""` if falling back to `document.title` is undesired behavior. |
-| **hashtags** | `"reactsimpleshare,javascript,react,npmjs"`                                 |                                                        | Comma-separated string of hashtags to append to the end of the tweet.                                                                           |
-| **via**      | `"stephanwozniak"`                                                          |                                                        | Twitter username for the source of the content (or your site).                                                                                  |
-| **related**  | `"stephanwozniak,chillective"`                                              |                                                        | Comma-separated string of Twitter usernames for other related Twitter accounts which may be suggested to the user later on.                     |
-|              |                                                                             |                                                        |                                                                                                                                                 |
+| Prop         | Default value                                         | Description                                                                                                                     |
+| ------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **url**      | Current page the user is on (`window.location.href`). | The URL to use in the share dialog.                                                                                             |
+| **color**    | Hex code for a primary brand color of that service.   | A 3-character or 6-character hex code. Include the "#".                                                                         |
+| **size**     | `"32px"`                                              | The size to render the icon. Any units accepted by the CSS property `font-size` will work here.                                 |
+| **text**     | Title of the current page (`document.title`).         | Default tweet text, which the user can edit before posting.                                                                     |
+| **hashtags** | Ignored by default.                                   | Comma-separated string of hashtags to append to the end of the tweet.                                                           |
+| **via**      | Ignored by default.                                   | Twitter username for the source of the content (or your site).                                                                  |
+| **related**  | Ignored by default.                                   | Comma-separated string of Twitter usernames for other accounts which may be suggested to the user after publishing their tweet. |
+|              |                                                       |                                                                                                                                 |
 
-### Tumblr
+### <TumblrShareButton \/>
+
+#### Examples
 
 ```js
 import { TumblrShareButton } from "react-simple-share";
 
-const YourComponent = props => (
+const BasicExample = () => <TumblrShareButton />;
+
+const OptionsExample = () => (
   <TumblrShareButton
     url="https://github.com/swozniak/react-simple-share/"
+    color="#35465D"
     size="40px"
-    color="#37474F"
-    title="React Simple Share - free component by @stephanwozniak"
-    caption="I'm previewing this free React Component by @stephanwozniak, made for easily sharing pages on social media sites!"
+    title="React Simple Share - by @stephanwozniak"
+    caption="Check out this free React Component by @stephanwozniak, made for easily sharing pages on social media sites!"
     tags="reactsimpleshare,javascript,react"
   />
 );
 ```
 
-### Pinterest
+#### Supported Props
 
-#### Example
+| Prop        | Default value                                         | Description                                                                                 |
+| ----------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **url**     | Current page the user is on (`window.location.href`). | The URL to use in the share dialog.                                                         |
+| **color**   | Hex code for a primary brand color of that service.   | A 3-character or 6-character hex code. Include the "#".                                     |
+| **size**    | `"32px"`                                              | Size to render the icon. Any units accepted by the CSS property `font-size` will work here. |
+| **title**   | Title of the current page (`document.title`).         | Default title text, which the user can edit before posting.                                 |
+| **caption** | Ignored by default.                                   | Default post text, which the user can edit before posting.                                  |
+| **tags**    | Ignored by default.                                   | Comma-separated string of tags to append to the end of the post.                            |
+|             |                                                       |                                                                                             |
+
+### <PinterestShareButton \/>
+
+#### Examples
 
 ```js
 import { PinterestShareButton } from "react-simple-share";
-
-const YourComponent = props => (
+const BasicExample = () => <PinterestShareButton />;
+const OptionsExample = () => (
   <PinterestShareButton
     url="https://github.com/swozniak/react-simple-share/"
+    color="#BD081C"
     size="40px"
-    color="#37474F"
-    media="WATAPP.jpg"
-    description="I'm previewing this free React Component by @stephanwozniak, made for easily sharing pages on social media sites!"
+    description="Check out this free React Component by @stephanwozniak, made for easily sharing pages on social media sites!"
+    media="https://avatars3.githubusercontent.com/u/2192011?s=460&v=4"
   />
 );
 ```
 
-### Reddit
+#### Supported Props
 
-#### Example
+| Prop            | Default value                                         | Description                                                                                 |
+| --------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **url**         | Current page the user is on (`window.location.href`). | The URL to use in the share dialog.                                                         |
+| **color**       | Hex code for a primary brand color of that service.   | A 3-character or 6-character hex code. Include the "#".                                     |
+| **size**        | `"32px"`                                              | Size to render the icon. Any units accepted by the CSS property `font-size` will work here. |
+| **description** | Ignored by default.                                   | Default post text, which the user can edit before posting.                                  |
+| **media**       | Ignored by default.                                   | Absolute URL path to an image to post with this pin.                                        |
+|                 |                                                       |                                                                                             |
+
+### <RedditShareButton \/>
+
+#### Examples
 
 ```js
 import { RedditShareButton } from "react-simple-share";
 
-const YourComponent = props => (
+const BasicComponent = () => <RedditShareButton />;
+const OptionsComponent = () => (
   <RedditShareButton
     url="https://github.com/swozniak/react-simple-share/"
+    color="#336699"
     size="40px"
-    color="#37474F"
     title="Simple Share - a free react component by @stephanwozniak, made for easily sharing links on social media sites!"
   />
 );
 ```
 
-### LinkedIn
+#### Supported Props
 
-#### Example
+| Prop      | Default value                                         | Description                                                                                 |
+| --------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **url**   | Current page the user is on (`window.location.href`). | The URL to use in the share dialog.                                                         |
+| **color** | Hex code for a primary brand color of that service.   | A 3-character or 6-character hex code. Include the "#".                                     |
+| **size**  | `"32px"`                                              | Size to render the icon. Any units accepted by the CSS property `font-size` will work here. |
+| **title** | Title of the current page (`document.title`).         | Default title text, which the user can edit before posting.                                 |
+|           |                                                       |                                                                                             |
+
+### <LinkedInShareButton \/>
+
+#### Examples
 
 ```js
 import { LinkedInShareButton } from "react-simple-share";
 
-const YourComponent = props => (
+const BasicComponent = () => <LinkedInShareButton />;
+const OptionsComponent = () => (
   <LinkedInShareButton
     url="https://github.com/swozniak/react-simple-share/"
+    color="#007BB5"
     size="40px"
-    color="#37474F"
     title="React Simple Share"
     summary="A free react component by @stephanwozniak, made for easily sharing links on social media sites!"
   />
 );
 ```
 
-### Google+
+#### Supported Props
 
-#### Example
+| Prop        | Default value                                         | Description                                                                                 |
+| ----------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **url**     | Current page the user is on (`window.location.href`). | The URL to use in the share dialog.                                                         |
+| **color**   | Hex code for a primary brand color of that service.   | A 3-character or 6-character hex code. Include the "#".                                     |
+| **size**    | `"32px"`                                              | Size to render the icon. Any units accepted by the CSS property `font-size` will work here. |
+| **title**   | Title of the current page (`document.title`).         | Default title text, which the user cannot edit before posting.                              |
+| **summary** | Ignored by default.                                   | Default post text, which the user can edit before posting.                                  |
+|             |                                                       |                                                                                             |
+
+### <GooglePlusShareButton \/>
+
+#### Examples
 
 ```js
 import { GooglePlusShareButton } from "react-simple-share";
 
-const YourComponent = props => (
+const BasicComponent = () => <GooglePlusShareButton />;
+const OptionsComponent = () => (
   <GooglePlusShareButton
     url="https://github.com/swozniak/react-simple-share/"
+    color="#DB4437"
     size="40px"
-    color="#37474F"
-    title="React Simple Share"
-    summary="A free react component by @stephanwozniak, made for easily sharing links on social media sites!"
   />
 );
 ```
+
+#### Supported Props
+
+| Prop      | Default value                                         | Description                                                                                 |
+| --------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **url**   | Current page the user is on (`window.location.href`). | The URL to use in the share dialog.                                                         |
+| **color** | Hex code for a primary brand color of that service.   | A 3-character or 6-character hex code. Include the "#".                                     |
+| **size**  | `"32px"`                                              | Size to render the icon. Any units accepted by the CSS property `font-size` will work here. |
+|           |                                                       |                                                                                             |
 
 ## License
 

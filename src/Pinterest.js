@@ -14,7 +14,9 @@ const Pinterest = props => {
     : "";
 
   const shareUrl = encodeURI(
-    `https://www.pinterest.com/pin/create/button/?${url}${media}${description}`
+    `https://www.pinterest.com/pin/create/button/?${encodeURIComponent(
+      `${url}${media}${description}`
+    )}`
   );
 
   const baseColor = props.color || "#BD081C",

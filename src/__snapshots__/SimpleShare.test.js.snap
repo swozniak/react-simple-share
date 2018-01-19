@@ -2,7 +2,7 @@
 
 exports[`Facebook hasn't changed 1`] = `
 <a
-  href="https://www.facebook.com/sharer/sharer.php?u=about:blank"
+  href="https://www.facebook.com/sharer/sharer.php?u%253Dabout%253Ablank"
   onClick={[Function]}
   onFocus={[Function]}
   onMouseDown={[Function]}
@@ -119,7 +119,7 @@ exports[`LinkedIn hasn't changed 1`] = `
 
 exports[`Pinterest hasn't changed 1`] = `
 <a
-  href="https://www.pinterest.com/pin/create/button/?url=about:blank"
+  href="https://www.pinterest.com/pin/create/button/?url%253Dabout%253Ablank"
   onClick={[Function]}
   onFocus={[Function]}
   onMouseDown={[Function]}
@@ -158,7 +158,7 @@ exports[`Pinterest hasn't changed 1`] = `
 
 exports[`Reddit hasn't changed 1`] = `
 <a
-  href="http://www.reddit.com/submit/?url=about:blank"
+  href="http://www.reddit.com/submit/?url=about:blank&title="
   onClick={[Function]}
   onFocus={[Function]}
   onMouseDown={[Function]}
@@ -200,7 +200,7 @@ exports[`SimpleShare hasn't changed 1`] = `
   className="SimpleShare"
 >
   <a
-    href="https://www.facebook.com/sharer/sharer.php?u=about:blank"
+    href="https://www.facebook.com/sharer/sharer.php?u%253Dabout%253Ablank"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
@@ -308,7 +308,7 @@ exports[`SimpleShare hasn't changed 1`] = `
     </svg>
   </a>
   <a
-    href="https://www.pinterest.com/pin/create/button/?url=about:blank"
+    href="https://www.pinterest.com/pin/create/button/?url%253Dabout%253Ablank"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
@@ -344,7 +344,7 @@ exports[`SimpleShare hasn't changed 1`] = `
     </svg>
   </a>
   <a
-    href="http://www.reddit.com/submit/?url=about:blank"
+    href="http://www.reddit.com/submit/?url=about:blank&title="
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}

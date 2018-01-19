@@ -8,7 +8,7 @@ import { DEFAULT_ICON_SIZE, adjustColorBrightness } from "./utils";
 const Reddit = props => {
   const size = `${props.size || DEFAULT_ICON_SIZE}`;
   const url = `url=${props.url || location.href}`;
-  const title = props.title ? `&title="${props.title}` : "";
+  const title = `&title=${props.title || document.title}`;
   const shareUrl = encodeURI(`http://www.reddit.com/submit/?${url}${title}`);
 
   const baseColor = props.color || "#336699",
