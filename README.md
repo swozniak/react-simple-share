@@ -334,7 +334,3 @@ const OptionsComponent = () => (
 ## License
 
 MIT. See [LICENSE.md](http://github.com/swozniak/react-simple-social-sharer/blob/master/LICENSE.md) for details.
-
-```
-
-```
