@@ -39,7 +39,7 @@ yarn add react-simple-share
 
 ### Single button
 
-![Single button](https://raw.githubusercontent.com/username/project/master/demo/single.png)
+![Single button](https://raw.githubusercontent.com/swozniak/react-simple-share/master/demo/single.png)
 
 ```js
 import { FacebookShareButton } from "react-simple-share";
@@ -49,7 +49,7 @@ const SingleButtonDemo = () => <FacebookShareButton />;
 
 ### Basic use with all supported networks included
 
-![Basic use with all supported networks included](https://raw.githubusercontent.com/username/project/master/demo/all.png)
+![Basic use with all supported networks included](https://raw.githubusercontent.com/swozniak/react-simple-share/master/demo/all.png)
 
 ```js
 import { SimpleShareButtons } from "react-simple-share";
@@ -59,7 +59,7 @@ const BasicUsageDemo = () => <SimpleShareButtons />;
 
 ### Monochromatic with custom size
 
-![Monochromatic with custom size](https://raw.githubusercontent.com/username/project/master/demo/monochrome.png)
+![Monochromatic with custom size](https://raw.githubusercontent.com/swozniak/react-simple-share/master/demo/monochrome.png)
 
 ```js
 import { SimpleShareButtons } from "react-simple-share";
@@ -71,7 +71,7 @@ const MonochromaticDemo = () => (
 
 ### Whitelist of selected networks
 
-![Whitelist of selected networks](https://raw.githubusercontent.com/username/project/master/demo/whitelist.png)
+![Whitelist of selected networks](https://raw.githubusercontent.com/swozniak/react-simple-share/master/demo/whitelist.png)
 
 ```js
 import { SimpleShareButtons } from "react-simple-share";
