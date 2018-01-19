@@ -1,4 +1,4 @@
-# react-simple-sharer
+# react-simple-share
 
 [![NPM](https://nodei.co/npm/react-simple-share.png)](https://www.npmjs.com/package/react-simple-share)
 
