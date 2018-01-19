@@ -35,30 +35,52 @@ Or, if you're using [yarn](https://yarnpkg.com/):
 yarn add react-simple-share
 ```
 
-## Quick Start: Shared links point to current page
+## Quick Examples
 
-You can pick and choose which buttons to use...
+### Single button
+
+![Single button](https://raw.githubusercontent.com/username/project/master/demo/single.png)
 
 ```js
-import { FacebookShareButton, TwitterShareButton } from "react-simple-share";
+import { FacebookShareButton } from "react-simple-share";
 
-const YourComponent = () => {
-  return (
-    <div>
-      <h3>Share this page!</h3>
-      <FacebookShareButton />
-      <TwitterShareButton />
-    </div>
-  );
-};
+const SingleButtonDemo = () => <FacebookShareButton />;
 ```
 
-...or, show the full set.
+### Basic use with all supported networks included
+
+![Basic use with all supported networks included](https://raw.githubusercontent.com/username/project/master/demo/all.png)
 
 ```js
 import { SimpleShareButtons } from "react-simple-share";
 
-const YourComponent = () => <SimpleShareButtons />;
+const BasicUsageDemo = () => <SimpleShareButtons />;
+```
+
+### Monochromatic with custom size
+
+![Monochromatic with custom size](https://raw.githubusercontent.com/username/project/master/demo/monochrome.png)
+
+```js
+import { SimpleShareButtons } from "react-simple-share";
+
+const MonochromaticDemo = () => (
+  <SimpleShareButtons color="#37474F" size="40px" />
+);
+```
+
+### Whitelist of selected networks
+
+![Whitelist of selected networks](https://raw.githubusercontent.com/username/project/master/demo/whitelist.png)
+
+```js
+import { SimpleShareButtons } from "react-simple-share";
+
+const WhitelistDemo = () => (
+  <SimpleShareButtons
+    whitelist={["Facebook", "Twitter", "LinkedIn", "Google+"]}
+  />
+);
 ```
 
 ## API by Component
@@ -312,3 +334,7 @@ const OptionsComponent = () => (
 ## License
 
 MIT. See [LICENSE.md](http://github.com/swozniak/react-simple-social-sharer/blob/master/LICENSE.md) for details.
+
+```
+
+```

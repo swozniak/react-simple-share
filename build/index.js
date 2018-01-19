@@ -672,7 +672,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Facebook = function Facebook(props) {
   var size = "" + (props.size || _utils.DEFAULT_ICON_SIZE);
   var url = "u=" + (props.url || location.href);
-  var shareUrl = encodeURI("https://www.facebook.com/sharer/sharer.php?" + encodeURIComponent(url));
+  var shareUrl = encodeURI("https://www.facebook.com/sharer/sharer.php?" + url);
 
   var baseColor = props.color || "#3B5998",
       hoverColor = (0, _utils.adjustColorBrightness)(baseColor, -0.1),
@@ -901,7 +901,7 @@ var Pinterest = function Pinterest(props) {
   var media = props.media ? "&media=" + props.media : "";
   var description = props.description ? "&description=" + props.description : "";
 
-  var shareUrl = encodeURI("https://www.pinterest.com/pin/create/button/?" + encodeURIComponent("" + url + media + description));
+  var shareUrl = encodeURI("https://www.pinterest.com/pin/create/button/?" + url + media + description);
 
   var baseColor = props.color || "#BD081C",
       hoverColor = (0, _utils.adjustColorBrightness)(baseColor, -0.1),

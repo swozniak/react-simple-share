@@ -1,6 +1,6 @@
 {
   "name": "react-simple-share",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description":
     "React component buttons that open popups to share your link on Facebook, Twitter, Reddit, Pinterest, LinkedIn, and Google+, without the client downloading heavy third-party sharing dependencies.",
   "main": "build/index.js",

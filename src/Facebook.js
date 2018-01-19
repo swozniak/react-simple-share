@@ -9,7 +9,7 @@ const Facebook = function(props) {
   const size = `${props.size || DEFAULT_ICON_SIZE}`;
   const url = `u=${props.url || location.href}`;
   const shareUrl = encodeURI(
-    `https://www.facebook.com/sharer/sharer.php?${encodeURIComponent(url)}`
+    `https://www.facebook.com/sharer/sharer.php?${url}`
   );
 
   const baseColor = props.color || "#3B5998",
